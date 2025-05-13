@@ -5,7 +5,7 @@ sheet = book.active
 cell = sheet.cell(row=1,column=2)
 Dict = {}   #{'Name': 'TC2', 'FirstName': 'b', 'LastName': 'g', 'Gender': 'l'}
 print(cell.value)
-sheet.cell(row=2,column=2).value = "Newaj"
+sheet.cell(row=2,column=2).value = "Shah Newaj"
 print(sheet.cell(row=2,column=2).value)
 print(sheet.max_row)
 print(sheet.max_column)
