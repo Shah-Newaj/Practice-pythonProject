@@ -40,6 +40,24 @@ driver.find_element(By.ID,"downloadButton").click()
 time.sleep(3)
 
 # edit excel with updated value
+def update_excel_data(filePath, searchTerm, colName, new_Value):
+    book = openpyxl.load_workbook(filePath)
+    sheet = book.active
+    Dict = {}
+
+    for i in range(1,sheet.max_column+1):
+        if sheet.cell(row=1,column=i).value == colName:
+            Dict["col"] = i
+
+    for i in range(1,sheet.max_row+1):
+        for j in range(1,sheet.max_column+1):
+            if sheet.cell(row=i,column=j).value == searchTerm:
+                Dict["row"] = i
+
+    sheet.cell(row=Dict["row"], column=Dict["col"]).value = new_Value
+    book.save(file_path)
+
+
 update_excel_data(file_path, fruit_name, "price", newValue)
 
 
