@@ -29,7 +29,7 @@ act_prods = []
 
 for result in results:
     act_prods.append(result.find_element(By.XPATH,"h4").text)   # inserting data into list using append function
-    result.find_element(By.XPATH,"div/button").click()
+    result.find_element(By.XPATH,"div/button").click() #Loop chaining to locate the Locator
 
 assert exp_prods == act_prods
 
