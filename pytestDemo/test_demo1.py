@@ -8,6 +8,8 @@
 # you can mark (tag) test @pytest.mark.smoke and then run with -m
 # you can skip any test or method using @pytest.mark.skip
 # run but will not document in the report @pytest.mark.xfail
+# datadriven and parameterization can be done with return statements in tuple formats
+
 
 import pytest
 
@@ -18,3 +20,7 @@ def test_firsProgram():
 @pytest.mark.smoke
 def test_greetcreditcard(setup):
     print("Good Morning")
+
+def test_crossBrowser(crossBrowser):
+    # print(crossBrowser[0])
+    print(crossBrowser[1])
