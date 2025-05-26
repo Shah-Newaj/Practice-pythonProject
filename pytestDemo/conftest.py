@@ -6,3 +6,8 @@ def setup():
 
     yield
     print("I will be executed last")
+
+@pytest.fixture()
+def dataLoad():
+    print("User profile data is being created")
+    return ["Shah", "Newaj", "Shuvro"]
