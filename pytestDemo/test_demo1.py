@@ -5,7 +5,7 @@
 # pytest -v -s -k creditcard (run with regular expression for specific method)
 # method name should have sense
 # -k stands for method name execution, -s logs in output, -v stands for more info metadata
-# you can mark (tag) test @pytest.mark.smoke and then run with -m
+# you can mark (tag) test @pytest.mark.smoke and then run with -m => pytest -v -s -m smoke
 # you can skip any test or method using @pytest.mark.skip
 # run but will not document in the report @pytest.mark.xfail
 # datadriven and parameterization can be done with return statements in tuple formats
