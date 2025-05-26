@@ -16,5 +16,5 @@ def test_firsProgram():
     print("Hello")
 
 @pytest.mark.smoke
-def test_greetcreditcard():
+def test_greetcreditcard(setup):
     print("Good Morning")
