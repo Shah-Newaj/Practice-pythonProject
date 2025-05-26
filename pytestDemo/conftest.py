@@ -1,3 +1,5 @@
+#conftest file used to generalize fixture and make it available to all test cases
+
 import pytest
 
 @pytest.fixture(scope="class")
@@ -11,3 +13,7 @@ def setup():
 def dataLoad():
     print("User profile data is being created")
     return ["Shah", "Newaj", "Shuvro"]
+
+@pytest.fixture(params=[("chrome", "Shah"), ("firefox", "Newaj"), ("edge", "Shuvro")])
+def crossBrowser(request):
+    return request.param
