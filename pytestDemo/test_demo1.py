@@ -9,6 +9,7 @@
 # you can skip any test or method using @pytest.mark.skip
 # run but will not document in the report @pytest.mark.xfail
 # datadriven and parameterization can be done with return statements in tuple formats
+# when you define fixture scope to class only, it will run once before class is initiated and at the end.
 
 
 import pytest
